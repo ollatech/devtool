@@ -5,15 +5,11 @@
     http://symfony.com/schema/dic/services/services-1.0.xsd">
 
     <services>
-        <service id="Olla\Devtool\Controller\GraphiqlController"
-                 class="Olla\Devtool\Controller\GraphiqlController"
-                 public="true">
-                 <argument type="service" id="twig" />
-        </service>
-        <service id="Olla\Devtool\Controller\SwaggerController"
-                 class="Olla\Devtool\Controller\SwaggerController"
-                 public="true">
-                 <argument type="service" id="twig" />
-        </service
-    </services>
-</container>
+        <service id="Olla\Devtool\Controller\GraphiqlController" class="Olla\Devtool\Controller\GraphiqlController" public="true">
+           <argument type="service" id="twig" />
+       </service>
+       <service id="Olla\Devtool\Controller\SwaggerController" class="Olla\Devtool\Controller\SwaggerController" public="true">
+           <argument type="service" id="twig" />
+       </service>
+       </services>
+   </container>

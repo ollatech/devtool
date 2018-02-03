@@ -15,7 +15,7 @@
     "require": {
         "php": ">=7.0",
         "olla/flow": "*",
-        "olla/platform": "*",
+        "olla/platform": "*"
     },
     "require-dev": {
         

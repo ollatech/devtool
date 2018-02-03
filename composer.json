@@ -1,0 +1,39 @@
+{
+    "name": "olla/devtool",
+    "type": "library",
+    "description": "Olla APi",
+    "keywords": ["REST", "GRAPHQL"],
+    "homepage": "https://olla.tech/devtool",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Olla Tech",
+            "email": "contact@olla.tech",
+            "homepage": "https://olla.tech"
+        }
+    ],
+    "require": {
+        "php": ">=7.0",
+        "olla/flow": "*",
+        "olla/platform": "*",
+    },
+    "require-dev": {
+        
+    },
+    "conflict": {
+    },
+    "suggest": {
+    
+    },
+    "autoload": {
+        "psr-4": { "Olla\\Devtool\\": "src/" }
+    },
+    "autoload-dev": {
+        "psr-4": { "Olla\\Devtool\\Tests\\": "tests/" }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    }
+}

@@ -13,19 +13,17 @@ final class GraphiqlController
      */
     private $twig;
 
-    public function __construct() {
+    public function __construct(TwigEnvironment $twig) {
         $this->twig = $twig;
     }
 
     public function indexAction($schemaName = null)
     {
-        return Response::create($this->twig->render($this->viewConfig->getTemplate(),
+        return Response::create($this->twig->render('@olladevtool/graphiql.html.twig',
             [
-                'endpoint' => $endpoint,
+                'endpoint' => '',
                 'versions' => [
-                    'graphiql' => $this->viewConfig->getJavaScriptLibraries()->getGraphiQLVersion(),
-                    'react' => $this->viewConfig->getJavaScriptLibraries()->getReactVersion(),
-                    'fetch' => $this->viewConfig->getJavaScriptLibraries()->getFetchVersion(),
+                    'graphiql' => ''
                 ],
             ]
         ));

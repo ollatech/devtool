@@ -4,11 +4,25 @@
         xsi:schemaLocation="http://symfony.com/schema/routing
         http://symfony.com/schema/routing/routing-1.0.xsd">
 
-    <route id="overblog_graphiql_endpoint" path="/graphiql">
-        <default key="_controller">overblog_graphiql.controller:indexAction</default>
+    <route id="olla_devtool_graphql" path="/devtool/graphiql">
+        <default key="_controller">Olla\Devtool\Controller\GraphiqlController:indexAction</default>
     </route>
-
-    <route id="overblog_graphiql_endpoint_multiple" path="/graphiql/{schemaName}">
-        <default key="_controller">overblog_graphiql.controller:indexAction</default>
+    <route id="olla_devtool_swagger" path="/devtool/api">
+        <default key="_controller">Olla\Devtool\Controller\SwaggerController:indexAction</default>
+    </route>
+    <route id="olla_devtool_resource" path="/devtool/resources">
+        <default key="_controller">Olla\Devtool\Controller\ResourceController:indexAction</default>
+    </route>
+    <route id="olla_devtool_operation" path="/devtool/operations">
+        <default key="_controller">Olla\Devtool\Controller\OperationController:indexAction</default>
+    </route>
+    <route id="olla_devtool_admin" path="/devtool/admins">
+        <default key="_controller">Olla\Devtool\Controller\AdminController:indexAction</default>
+    </route>
+    <route id="olla_devtool_frontend" path="/devtool/frontends">
+        <default key="_controller">Olla\Devtool\Controller\FrontendController:indexAction</default>
+    </route>
+    <route id="olla_devtool_schema" path="/devtool/schema">
+        <default key="_controller">Olla\Devtool\Controller\SchemaController:indexAction</default>
     </route>
 </routes>

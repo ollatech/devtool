@@ -1,15 +1,39 @@
 <?xml version="1.0" ?>
 <container xmlns="http://symfony.com/schema/dic/services"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://symfony.com/schema/dic/services
-    http://symfony.com/schema/dic/services/services-1.0.xsd">
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://symfony.com/schema/dic/services
+  http://symfony.com/schema/dic/services/services-1.0.xsd">
+  <services>
+    <service id="Olla\Devtool\Controller\ResourceController" class="Olla\Devtool\Controller\ResourceController" public="true">
+      <argument type="service" id="twig" />
+      <argument type="service" id="olla.metadata" />
+    </service>
+    
+    <service id="Olla\Devtool\Controller\GraphiqlController" class="Olla\Devtool\Controller\GraphiqlController" public="true">
+      <argument type="service" id="twig" />
 
-    <services>
-        <service id="Olla\Devtool\Controller\GraphiqlController" class="Olla\Devtool\Controller\GraphiqlController" public="true">
-           <argument type="service" id="twig" />
-       </service>
-       <service id="Olla\Devtool\Controller\SwaggerController" class="Olla\Devtool\Controller\SwaggerController" public="true">
-           <argument type="service" id="twig" />
-       </service>
-       </services>
-   </container>
+    </service>
+    <service id="Olla\Devtool\Controller\SwaggerController" class="Olla\Devtool\Controller\SwaggerController" public="true">
+     <argument type="service" id="twig" />
+   </service>
+
+   <service id="Olla\Devtool\Controller\OperationController" class="Olla\Devtool\Controller\OperationController" public="true">
+     <argument type="service" id="twig" />
+     <argument type="service" id="olla.metadata" />
+   </service>
+   <service id="Olla\Devtool\Controller\AdminController" class="Olla\Devtool\Controller\AdminController" public="true">
+     <argument type="service" id="twig" />
+     <argument type="service" id="olla.metadata" />
+   </service>
+   <service id="Olla\Devtool\Controller\FrontendController" class="Olla\Devtool\Controller\FrontendController" public="true">
+     <argument type="service" id="twig" />
+     <argument type="service" id="olla.metadata" />
+   </service>
+
+   <service id="Olla\Devtool\Controller\SchemaController" class="Olla\Devtool\Controller\SchemaController" public="true">
+     <argument type="service" id="twig" />
+     <argument type="service" id="olla.metadata" />
+   </service>
+
+ </services>
+</container>
